@@ -22,6 +22,11 @@ services:
     stdin_open: true
     volumes:
       - ../src:${AMENT_WORKSPACE_DIR}/src
+      # Use the local world to avoid Gazebo Fuel downloads at startup.
+      - type: bind
+        source: ../1_simulation/worlds/turtlebot3_world.world
+        target: /opt/ros/jazzy/share/turtlebot3_gazebo/worlds/turtlebot3_world.world
+        read_only: true
       - /dev/shm:/dev/shm
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /tmp/.docker.xauth:/tmp/.docker.xauth:rw

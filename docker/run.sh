@@ -79,6 +79,7 @@ docker run -it --rm --net host --privileged \
     -v /dev:/dev \
     -v /tmp:/tmp \
     -v /etc/localtime:/etc/localtime:ro \
+    -v "$WS_PATH/1_simulation/worlds/turtlebot3_world.world:/opt/ros/jazzy/share/turtlebot3_gazebo/worlds/turtlebot3_world.world:ro" \
     -v $WS_PATH/config/default.rviz:/home/developer/.rviz2/default.rviz \
     -v $WS_PATH/maps:/turtlebot_ws/maps \
     -v $WS_PATH/src:/turtlebot_ws/src \

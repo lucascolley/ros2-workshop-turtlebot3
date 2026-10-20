@@ -155,7 +155,7 @@ NAVIGATION_PANE=$(tmux split-window \
     -h -t "$ZENOH_PANE" -l '66%' -P -F '#{pane_id}')
 
 GAZEBO_PANE=$(tmux split-window \
-    -h -t "$RVIZ_PANE" -l '50%' -P -F '#{pane_id}')
+    -h -t "$NAVIGATION_PANE" -l '50%' -P -F '#{pane_id}')
 
 # Prevent bash commands being sent before tmux panes are setup correctly
 sleep 1
